@@ -1,23 +1,35 @@
-* {
-  /* font-family: Arial, Helvetica, sans-serif; */
-  font-family: 'Indie Flower', cursive;
-}
-
 html, body {
   margin: 0;
   border: 0;
-  padding: 0;
-  background-color: #fff;
+  padding: 40px;
+  background-color: rgb(255, 211, 246);
+  font-family: 'Indie Flower', cursive;
 }
 
-main {
-  margin: auto;
-  width: 40%;
-  padding: 20px;
+body {
   font-size: 2em;
 }
 
-main > h1 {
-  text-align: center;
+h1 {
   font-size: 3.5em;
+  text-align: center;
 }
+
+img{
+  display: block;
+  margin: 0 auto 0 auto;
+}
+
+.wrapper {
+  display: grid; 
+  grid-template-columns: 1.2fr 0.8fr 1fr; 
+  grid-template-rows: 0.5fr 2fr 1fr; 
+  gap: 1px 1px; 
+  grid-template-areas: 
+    "Header Header Header"
+    "Sidebar Content Content"
+    ". . ."; 
+}
+.header { grid-area: Header; }
+.sidebar { grid-area: Sidebar; }
+.content { grid-area: Content; }
