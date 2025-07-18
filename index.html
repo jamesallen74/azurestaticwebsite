@@ -4,34 +4,83 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
   <title>Ariella Allen</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Patrick+Hand&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: 'Indie Flower', cursive;
+      background: linear-gradient(to bottom right, #ffe0f0, #e0f7ff);
+      color: #333;
+    }
+
+    .wrapper {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .header h1 {
+      text-align: center;
+      font-size: 2.5em;
+      color: #ff69b4;
+      text-shadow: 2px 2px #ffd1f5;
+    }
+
+    .floating-emojis {
+      animation: float 6s infinite;
+      text-align: center;
+      font-size: 1.8em;
+      margin-bottom: 10px;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .content {
+      background-color: #fff8fc;
+      border: 2px dashed #ff90c2;
+      border-radius: 20px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+    }
+
+    .sidebar img {
+      display: block;
+      max-width: 100%;
+      margin: 0 auto;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+  </style>
 </head>
 
 <body>
   <div class="wrapper">
-    <div class="box header">
-      <h1>Ariella Allen's website</h1>
+    <div class="floating-emojis">😻 💕 🐾 🎨 🐱</div>
+
+    <div class="header">
+      <h1>Ariella Allen's Website</h1>
     </div>
 
-    <div class="box content">
-      💗🌈😻
-      I am Ariella and I am 10 years old.  
-      I live in Cincinnati, Ohio.
-      I am in 4th grade.
-      My favorite school subjects are math and art.
-      I want to be a teacher when I grow up.
-      I also want to write books about cats.
-      I love to dance, sing, draw, arial silks, paint, play board games, and go to the playground.
-      I love my 2 cats Bella and Candy.
-      I miss my other cats Tux and Tigger who are in kitty heaven.
-      I have an awesome mom.
-      My dad is a goofball.
-      💗🌈😻
+    <div class="content">
+      <p>💗🌈😻</p>
+      <p>I am Ariella and I am 10 years old. I live in Cincinnati, Ohio. I am in 4th grade.</p>
+      <p>My favorite school subjects are math and art. I want to be a teacher when I grow up.</p>
+      <p>I also want to write books about cats.</p>
+      <p>I love to dance, sing, draw, do aerial silks, paint, play board games, and go to the playground.</p>
+      <p>I love my 2 cats Bella and Candy. I miss my other cats Tux and Tigger who are in kitty heaven.</p>
+      <p>I have an awesome mom. My dad is a goofball.</p>
+      <p>💗🌈😻</p>
     </div>
-    <div class="box sidebar"><img src="cat.jpg" width="70%" /></div>
+
+    <div class="sidebar">
+      <img src="cat.jpg" alt="Ariella's Cat">
+    </div>
   </div>
 </body>
 
