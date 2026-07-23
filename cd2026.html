@@ -51,7 +51,17 @@
     cursor:pointer;font-size:17px;line-height:1;padding:0;color:#5b6472;transition:transform .12s,color .12s;font-family:inherit}
   .heart:hover{transform:scale(1.18);color:var(--fav)}
   .heart.on{color:var(--fav)}
-  @media(max-width:420px){.cell .t{font-size:12.5px}.cell{padding:10px}.heart{font-size:16px}}
+  @media(max-width:560px){
+    .grid{gap:8px}
+    /* taller-than-wide cells on phones so nothing gets squished */
+    .cell{aspect-ratio:auto;min-height:172px;padding:10px 9px}
+    .cell .t{font-size:12.5px;line-height:1.24;-webkit-line-clamp:8;padding-right:20px}
+    .cell .b{flex-direction:column;align-items:flex-start;gap:4px;margin-top:6px}
+    .cell .sp{font-size:10.5px;-webkit-line-clamp:3}
+    .cell .rm{font-size:9.5px;padding:2px 6px}
+    .heart{font-size:15px;width:26px;height:26px;top:4px;right:3px}
+  }
+  @media(max-width:360px){.cell{min-height:190px}.cell .t{font-size:11.5px;-webkit-line-clamp:9}}
   #overlay{position:fixed;inset:0;background:rgba(8,10,14,.72);z-index:50;display:none;align-items:center;justify-content:center;padding:16px;backdrop-filter:blur(3px)}
   #overlay.show{display:flex}
   #modal{background:var(--card2);border:1px solid var(--line);border-top:4px solid var(--accent);border-radius:16px;max-width:600px;width:100%;max-height:88vh;overflow:auto;padding:20px}
